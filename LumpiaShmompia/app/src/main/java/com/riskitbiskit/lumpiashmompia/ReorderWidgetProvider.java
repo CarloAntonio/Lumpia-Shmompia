@@ -20,17 +20,14 @@ public class ReorderWidgetProvider extends AppWidgetProvider {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.reorder_widget_provider);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-
         //Setup Reorder Button
         Intent reorderIntent = new Intent(context, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, reorderIntent, 0);
         views.setOnClickPendingIntent(R.id.previous_order_button_widget, pendingIntent);
 
-        //Setup the ReorderWidgetService intent to act as the adapter for the listview
+        //Setup the WidgetService intent to act as the adapter for the listview
         Intent intent = new Intent(context, WidgetService.class);
         views.setRemoteAdapter(R.id.widget_lv, intent);
-
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

@@ -58,8 +58,6 @@
                 android:resource="@xml/reorder_widget_provider_info"/>
         </receiver>
 
-        <service android:name=".ReorderWidgetService"/>
-
         <service android:name=".WidgetService"
                  android:permission="android.permission.BIND_REMOTEVIEWS"/>
 

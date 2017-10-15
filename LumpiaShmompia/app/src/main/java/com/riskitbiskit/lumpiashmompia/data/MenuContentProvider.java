@@ -55,12 +55,10 @@ public class MenuContentProvider extends ContentProvider {
         int match = sUriMatcher.match(uri);
         switch (match) {
             case ITEMS:
-                //TODO: Query for all menu items
                 returnCursor = database.query(MenuEntry.TABLE_NAME, projection, selection, selectionArgs,
                         null, null, sortOrder);
                 break;
             case ITEMS_WITH_ID:
-                //TODO: Query for a specific item
                 selection = MenuEntry._ID + "=?";
                 selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
 
@@ -71,7 +69,6 @@ public class MenuContentProvider extends ContentProvider {
                 throw new IllegalArgumentException("Cannot query unknown URI " + uri);
         }
 
-        //TODO: change to returnCursor once all cases have been made
         return returnCursor;
     }
 

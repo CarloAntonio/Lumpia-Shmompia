@@ -190,6 +190,7 @@ public class OrderActivity extends AppCompatActivity implements
                 editor.apply();
 
                 //Update widget
+                //Used: https://stackoverflow.com/questions/4424723/android-appwidget-wont-update-from-activity, for updating widget from activity
                 AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
                 int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(getBaseContext(), ReorderWidgetProvider.class));
                 appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_lv);
