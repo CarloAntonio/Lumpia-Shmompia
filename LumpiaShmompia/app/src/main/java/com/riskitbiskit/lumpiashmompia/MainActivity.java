@@ -29,7 +29,7 @@ import static com.riskitbiskit.lumpiashmompia.data.MenuContract.*;
 public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
     //Constants
-    public static final String API_KEY = "AIzaSyAmT4EE84-llkzzxs9UUgSevVtnD9GJ_qw";
+    public static final String API_KEY = "omitted";
     public static final String INTRO_VIDEO = "HITJz8oiYxw";
     public static final String NUM_ITEMS = "numItems";
 
@@ -214,7 +214,7 @@ public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.O
 
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-        Toast.makeText(this, "Video Failed to Initialize", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.video_failed_to_initialize, Toast.LENGTH_SHORT).show();
     }
 
     private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {

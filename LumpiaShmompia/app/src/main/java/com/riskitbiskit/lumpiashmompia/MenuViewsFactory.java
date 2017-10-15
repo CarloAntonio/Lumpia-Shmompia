@@ -28,7 +28,7 @@ public class MenuViewsFactory implements RemoteViewsService.RemoteViewsFactory {
     public void onCreate() {
         mItems = new ArrayList<>();
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mAppContext);
-        empty = "Empty";
+        empty = mAppContext.getString(R.string.empty);
     }
 
     @Override

@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_shopping_cart_white_24dp"
         app:showAsAction="always"
         android:visible="false"
-        android:title="Home">
+        android:title="@string/home">
     </item>
 
     <item
@@ -17,7 +17,7 @@
         android:icon="@drawable/ic_remove_shopping_cart_white_24dp"
         app:showAsAction="always"
         android:visible="true"
-        android:title="Home">
+        android:title="@string/home">
     </item>
 
 </menu>

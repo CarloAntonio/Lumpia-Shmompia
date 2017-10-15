@@ -163,7 +163,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
 
                         //Check if it is a copy
                         if (isCopy) {
-                            Toast.makeText(getContext(), "Already In Cart", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), getContext().getString(R.string.already_in_cart), Toast.LENGTH_SHORT).show();
                         } else {
                             //Add to list
                             cartList.add(itemName);
@@ -174,7 +174,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
                             editor.putString(MenuActivity.CHECKOUT_LIST, newJson);
                             editor.apply();
 
-                            Toast.makeText(getContext(), "Added To Cart", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), getContext().getString(R.string.added_to_cart), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }

@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.riskitbiskit.lumpiashmompia.R;
 import com.riskitbiskit.lumpiashmompia.data.MenuContract.MenuEntry;
 
 
@@ -59,14 +60,14 @@ public class MenuContentProvider extends ContentProvider {
                         null, null, sortOrder);
                 break;
             case ITEMS_WITH_ID:
-                selection = MenuEntry._ID + "=?";
+                selection = MenuEntry._ID + getContext().getString(R.string.equals_question);
                 selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
 
                 returnCursor = database.query(MenuEntry.TABLE_NAME, projection, selection, selectionArgs,
                         null, null, sortOrder);
                 break;
             default:
-                throw new IllegalArgumentException("Cannot query unknown URI " + uri);
+                throw new IllegalArgumentException(getContext().getString(R.string.cannot_query_uri) + uri);
         }
 
         return returnCursor;
@@ -86,12 +87,12 @@ public class MenuContentProvider extends ContentProvider {
                 long id = database.insert(MenuEntry.TABLE_NAME, null, contentValues);
 
                 if (id == -1) {
-                    Log.e(LOG_TAG, "Failed in insert row(s) " + uri);
+                    Log.e(LOG_TAG, getContext().getString(R.string.failed_row_insert) + uri);
                     return null;
                 }
                 return ContentUris.withAppendedId(uri, id);
             default:
-                throw new IllegalArgumentException("Insertion is not supported for " + uri);
+                throw new IllegalArgumentException(getContext().getString(R.string.insert_not_supported) + uri);
         }
     }
 
@@ -119,7 +120,7 @@ public class MenuContentProvider extends ContentProvider {
                 //return the number of rowsDeleted
                 return rowsDeleted;
             default:
-                throw new IllegalArgumentException("Deletion is not supported for " + uri);
+                throw new IllegalArgumentException(getContext().getString(R.string.deletion_not_supported) + uri);
         }
     }
 
@@ -138,7 +139,7 @@ public class MenuContentProvider extends ContentProvider {
                 rowsUpdated = database.update(MenuEntry.TABLE_NAME, contentValues, selection, selectionArgs);
                 break;
             case ITEMS_WITH_ID:
-                selection = MenuEntry._ID + "=?";
+                selection = MenuEntry._ID + getContext().getString(R.string.equals_question);
                 selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
                 rowsUpdated = database.update(MenuEntry.TABLE_NAME, contentValues, selection, selectionArgs);
                 Log.e(LOG_TAG, rowsUpdated + "");

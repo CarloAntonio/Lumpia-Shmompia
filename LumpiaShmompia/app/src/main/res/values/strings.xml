@@ -30,4 +30,39 @@
     <string name="item_total">Item Total:</string>
     <string name="order">Order</string>
     <string name="previous_order">Previous Order:</string>
+    <string name="checkout_button">Button to add to checkout list</string>
+    <string name="location_icon_image">location icon image</string>
+    <string name="owner_icon_image">owner icon image</string>
+    <string name="established_date_icon_image">established date icon image</string>
+    <string name="banner_image_container">banner image container</string>
+    <string name="item_image_container">item image container</string>
+    <string name="home">Home</string>
+    <string name="_1">1</string>
+    <string name="dollar_sign">$</string>
+    <string name="cannot_query_uri">Cannot query unknown URI</string>
+    <string name="failed_row_insert">Failed in insert row(s)</string>
+    <string name="insert_not_supported">Insertion is not supported for</string>
+    <string name="deletion_not_supported">Deletion is not supported for</string>
+    <string name="equals_question">=?</string>
+    <string name="must_implemen_quant_listener">must implement OnQuantityChangeListener</string>
+    <string name="map_uri"><![CDATA[https://www.google.com/maps/search/?api=1&query=554+Ygnacio+Valley+Rd,+Walnut Creek]]></string>
+    <string name="nothing_in_cart">Nothing In Cart</string>
+    <string name="one">1</string>
+    <string name="already_in_cart">Already In Cart</string>
+    <string name="added_to_cart">Added To Cart</string>
+    <string name="video_failed_to_initialize">Video Failed to Initialize</string>
+    <string name="no_previous_order">No Previous Order</string>
+    <string name="is_two_panel">isTwoPanel</string>
+    <string name="must_implement_menu_listener">must implement OnMenuItemClickListener</string>
+    <string name="empty">Empty</string>
+    <string name="company_email">thescientistexplores@gmail.com</string>
+    <string name="email_subject">ATTN: NEW ORDER</string>
+    <string name="mailto">mailto:</string>
+    <string name="unable_close_input_stream">Unable to close input stream</string>
+    <string name="URL_creation_error">Error with creating URL</string>
+    <string name="error_response_code">Error Response Code:</string>
+    <string name="error_retrieving_json_results">Problem retrieving the JSON results.</string>
+    <string name="from_json">From JSON:</string>
+    <string name="problem_parsing_json">Problem parsing the earthquake JSON results</string>
+    <string name="image_container_for_current_weather">image container for current weather</string>
 </resources>

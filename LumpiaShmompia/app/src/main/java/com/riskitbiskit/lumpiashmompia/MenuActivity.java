@@ -20,14 +20,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.riskitbiskit.lumpiashmompia.data.MenuContract;
 import com.riskitbiskit.lumpiashmompia.data.MenuContract.MenuEntry;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.riskitbiskit.lumpiashmompia.data.MenuContract.MenuEntry.CONTENT_URI;
-import static java.security.AccessController.getContext;
 
 public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMenuItemClickListener {
 
@@ -109,7 +107,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
         }
 
         if (findViewById(R.id.two_panel_layout) != null) {
-            editor.putBoolean("isTwoPanel", true);
+            editor.putBoolean(getString(R.string.is_two_panel), true);
             editor.apply();
 
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -130,7 +128,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
             }
 
         } else {
-            editor.putBoolean("isTwoPanel", false);
+            editor.putBoolean(getString(R.string.is_two_panel), false);
             editor.apply();
         }
     }
@@ -167,7 +165,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
                 startActivity(intent);
                 return true;
             case R.id.menu_home_action_empty:
-                Toast.makeText(getBaseContext(), "Nothing In Cart", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), getBaseContext().getString(R.string.nothing_in_cart), Toast.LENGTH_SHORT).show();
                 return true;
         }
 
@@ -205,7 +203,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
                 case 0:
                     sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                     if (sharedPreferences.getString(OrderActivity.PREVIOUS_ORDER, MenuActivity.EMPTY).contentEquals(MenuActivity.EMPTY)) {
-                        Toast.makeText(getBaseContext(), "No Previous Order", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), R.string.no_previous_order, Toast.LENGTH_SHORT).show();
                     } else {
                         //Update shared preference with old order
                         String previousOrder = sharedPreferences.getString(OrderActivity.PREVIOUS_ORDER, MenuActivity.EMPTY);
@@ -223,7 +221,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
                     return;
                 case 2:
                     if (sharedPreferences.getString(CHECKOUT_LIST, EMPTY).contentEquals(EMPTY)) {
-                        Toast.makeText(getBaseContext(), "Nothing In Cart", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getBaseContext(), getBaseContext().getString(R.string.nothing_in_cart), Toast.LENGTH_SHORT).show();
                     } else {
                         Intent checkoutIntent = new Intent(getBaseContext(), OrderActivity.class);
                         startActivity(checkoutIntent);
@@ -236,7 +234,7 @@ public class MenuActivity extends AppCompatActivity implements MenuFragment.OnMe
 
                     //Reset all item totals in database
                     ContentValues contentValues = new ContentValues();
-                    contentValues.put(MenuEntry.COLUMN_ITEM_COUNT, "1");
+                    contentValues.put(MenuEntry.COLUMN_ITEM_COUNT, getBaseContext().getString(R.string.one));
                     getContentResolver().update(CONTENT_URI, contentValues, null, null);
 
                     //Restart activity

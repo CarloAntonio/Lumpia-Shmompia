@@ -36,7 +36,7 @@ public class OrderCursorAdapter extends CursorAdapter {
         if (context instanceof OnQuantityChangedListener) {
             mListener = (OnQuantityChangedListener) context;
         } else {
-            throw new RuntimeException(context.toString() + "must implement OnQuantityChangeListener");
+            throw new RuntimeException(context.toString() + context.getString(R.string.must_implemen_quant_listener));
         }
     }
 

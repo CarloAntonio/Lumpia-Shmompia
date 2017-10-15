@@ -174,7 +174,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                         }
 
                         if (isCopy) {
-                            Toast.makeText(getBaseContext(), "Already In Cart", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), R.string.already_in_cart, Toast.LENGTH_SHORT).show();
                         } else {
                             //Add to list
                             cartList.add(itemName);
@@ -185,7 +185,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                             editor.putString(MenuActivity.CHECKOUT_LIST, newJson);
                             editor.apply();
 
-                            Toast.makeText(getBaseContext(), "Added To Cart", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), R.string.added_to_cart, Toast.LENGTH_SHORT).show();
                         }
                     }
                     setResult(RESULT_OK, null);

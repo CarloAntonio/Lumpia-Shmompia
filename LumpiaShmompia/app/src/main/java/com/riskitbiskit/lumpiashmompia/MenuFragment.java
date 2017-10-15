@@ -59,7 +59,7 @@ public class MenuFragment extends Fragment implements LoaderManager.LoaderCallba
         menuGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Boolean isTwoPanel = mSharedPreferences.getBoolean("isTwoPanel", false);
+                Boolean isTwoPanel = mSharedPreferences.getBoolean(getString(R.string.is_two_panel), false);
 
                 if (isTwoPanel) {
                     mListener.onMenuItemClicked(id);
@@ -87,7 +87,7 @@ public class MenuFragment extends Fragment implements LoaderManager.LoaderCallba
         try {
             mListener = (OnMenuItemClickListener) context;
         } catch (ClassCastException CCE) {
-            throw new ClassCastException(context.toString() + " must implement OnMenuItemClickListener");
+            throw new ClassCastException(context.toString() + getString(R.string.must_implement_menu_listener));
         }
     }
 

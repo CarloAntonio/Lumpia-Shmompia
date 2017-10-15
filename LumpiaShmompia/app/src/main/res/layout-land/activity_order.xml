@@ -49,18 +49,16 @@
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="Total:"/>
+                android:text="@string/total"/>
 
             <TextView
                 android:id="@+id/order_total_tv"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:layout_weight="1"
                 android:gravity="center"
-                android:textSize="18sp"
-                android:text="$25.00"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -69,8 +67,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-android:layout_margin="16dp"
-            android:text="Send Order"/>
+            android:layout_margin="16dp"
+            android:text="@string/send_order"/>
 
     </LinearLayout>
 

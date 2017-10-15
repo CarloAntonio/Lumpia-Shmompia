@@ -124,6 +124,7 @@
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/detail_fab"
         android:src="@drawable/ic_add_white_24dp"
+        android:contentDescription="@string/checkout_button"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_margin="16dp"

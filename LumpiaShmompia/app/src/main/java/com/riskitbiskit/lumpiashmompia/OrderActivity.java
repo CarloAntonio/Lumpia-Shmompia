@@ -61,7 +61,7 @@ public class OrderActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_order);
         ButterKnife.bind(this);
 
-        emailAddress = new String[] {"thescientistexplores@gmail.com"};
+        emailAddress = new String[] {getString(R.string.company_email)};
 
         //Setup toolbar
         setSupportActionBar(orderToolbar);
@@ -168,9 +168,9 @@ public class OrderActivity extends AppCompatActivity implements
 
                 //Setup intent and send
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("mailto:"));
+                intent.setData(Uri.parse(getString(R.string.mailto)));
                 intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
-                intent.putExtra(Intent.EXTRA_SUBJECT, "ATTN: NEW ORDER");
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject));
                 intent.putExtra(Intent.EXTRA_TEXT, finalEmailMessage);
 
                 if (intent.resolveActivity(getPackageManager()) != null) {

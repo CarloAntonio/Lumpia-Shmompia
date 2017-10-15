@@ -10,6 +10,7 @@
         android:id="@+id/food_iv"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:contentDescription="@string/item_image_container"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/adobo"/>
 
