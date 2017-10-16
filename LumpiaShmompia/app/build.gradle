@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'Antonio'
             keyPassword 'lumpia'
-            storeFile file('$rootDir/keystore.jks')
+            storeFile file("$rootDir/keystore.jks")
             storePassword 'lumpia'
         }
     }
