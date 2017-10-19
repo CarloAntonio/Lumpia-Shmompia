@@ -19,19 +19,19 @@ Menu Screen (Phone) </br>
 <img src="https://user-images.githubusercontent.com/25759516/31749231-8e56bcc0-b42d-11e7-84cf-f50ef6ff25ae.png" width="400">
 
 About Screen (Phone) </br>
-<img src="https://user-images.githubusercontent.com/25759516/31749232-8f7011ba-b42d-11e7-857f-f86ad5b98294.png">
+<img src="https://user-images.githubusercontent.com/25759516/31749232-8f7011ba-b42d-11e7-857f-f86ad5b98294.png" width="400">
 
 Hamburger Menu (Phone) </br>
-<img src="https://user-images.githubusercontent.com/25759516/31749233-90a0d5d8-b42d-11e7-8a2e-2965517ac3b5.png">
+<img src="https://user-images.githubusercontent.com/25759516/31749233-90a0d5d8-b42d-11e7-8a2e-2965517ac3b5.png" width="400">
 
 Order Screen (Phone) </br>
-<img src="https://user-images.githubusercontent.com/25759516/31749235-92336aaa-b42d-11e7-8e8b-e36ec66a4b82.png">
+<img src="https://user-images.githubusercontent.com/25759516/31749235-92336aaa-b42d-11e7-8e8b-e36ec66a4b82.png" width="400">
 
 Two Panel (Tablet) </br>
-<img src="https://user-images.githubusercontent.com/25759516/31749236-94433b9a-b42d-11e7-96e9-06c87f599b88.png">
+<img src="https://user-images.githubusercontent.com/25759516/31749236-94433b9a-b42d-11e7-96e9-06c87f599b88.png" width="600">
 
 Order Screen (Tablet) </br>
-<img src="https://user-images.githubusercontent.com/25759516/31749239-97e60b56-b42d-11e7-9a39-c9447ca1f7c3.png">
+<img src="https://user-images.githubusercontent.com/25759516/31749239-97e60b56-b42d-11e7-9a39-c9447ca1f7c3.png" width="600">
 
 ### Libraries Used:
 * Butterknife
